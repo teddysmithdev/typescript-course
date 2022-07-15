@@ -7,14 +7,13 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Build Project",
-            "program": "${workspaceFolder}/src/app.ts",
-            "preLaunchTask": "npm: build",
-            "sourceMaps": true,
-            "smartStep": true,
-            "internalConsoleOptions": "openOnSessionStart",
-            "outFiles": [
-                "${workspaceFolder}/out/**/*.js"
+            "name": "Launch Program",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${workspaceFolder}/src/app.ts"
             ]
         }
     ]
